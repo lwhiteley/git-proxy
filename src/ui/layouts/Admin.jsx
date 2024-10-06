@@ -11,6 +11,7 @@ import styles from '../assets/jss/material-dashboard-react/layouts/adminStyle';
 import logo from '../assets/img/git-proxy.png';
 import { UserContext } from '../../context';
 import { getUser } from '../services/user';
+import { useGetUsers } from '../services/users/users.hooks';
 
 let ps;
 let refresh = false;
@@ -30,6 +31,7 @@ const switchRoutes = (
 const useStyles = makeStyles(styles);
 
 export default function Admin({ ...rest }) {
+  console.log(useGetUsers());
   // styles
   const classes = useStyles();
   // ref to help us initialize PerfectScrollbar on windows devices
